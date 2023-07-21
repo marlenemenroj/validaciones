@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+
+*{
+    font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+form {
+  background-color: blanchedalmond;
+  padding: 2em;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 2;
+  justify-content: center;
+}
+
+input,
+label {
+  /* width: 4em; */
+  flex-grow: 0;
+flex-shrink: 2;
+flex-basis: 45%;
+}
+
+label {
+    text-shadow: 3px 2px 2px #77777777;
+
+}
+
+input {
+  margin: 3px 0px 1em 0px;
+}
+
+input[type=submit]{
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background-color: #ff36037c;
+    color: #222;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+input[type=submit]:hover {
+        background-color: #611502f1;
+        color:aliceblue;
+        box-shadow: 5px 0px 1em 0px #de0505;
+        border-style: solid;
+        border-color: aliceblue;
+    }
+    
