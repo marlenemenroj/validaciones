@@ -121,13 +121,13 @@ function mirarFecha() {
  */
 
 
-// 5 Validar tiempo en formato de hora   ¡¡¡¡¡EL FORMATO QUE DEBERÍA SER CORRECTO DEVUELVE FALSE!!!!
+ // 5 Validar tiempo en formato de hora   ¡¡¡¡¡EL FORMATO QUE DEBERÍA SER CORRECTO DEVUELVE FALSE!!!!
 
 function validarTiempo(tiempo) {
         const hora = tiempo.trim()//con Trim elimina los espacios sobrantes delante y detrás
         const pattern = /^[0-2][0-9]:[0-5][0-9]$/;
 
-        if (typeof hora !== Number || hora === "" || !pattern.test(url)) {  //* Primero comprobar si se cumplen las condiciones para continuar
+        if (typeof hora !== Number || hora === "" || !pattern.test(hora)) {  //* Primero comprobar si se cumplen las condiciones para continuar
 
                 console.log("entro en el if")
 
@@ -149,10 +149,10 @@ function mirarHora(){
 // 6 Validar fecha de nacimiento    !!!PENDIENTE!!
 
 function validarFechaNac(fechaN) {
-        const hora = fechaN.trim; //con Trim elimina los espacios sobrantes delante y detrás
+        const horaN = fechaN.trim; //con Trim elimina los espacios sobrantes delante y detrás
         const pattern = /^[0-2][0-9]:[0-5][0-9]$/;
 
-        if (typeof fechaN !== 'string' || fechaN === "" || !pattern.test(url)) {  //* Primero comprobar si se cumplen las condiciones para continuar
+        if (typeof fechaN !== 'string' || fechaN === "" || !pattern.test(horaN)) {  //* Primero comprobar si se cumplen las condiciones para continuar
 
                 console.log("entro en el if")
 
@@ -163,12 +163,10 @@ function validarFechaNac(fechaN) {
 
 }
 
-console.log(validarFechaNac)
-
-function validarFechaNac(){
-        console.log("fecha:", typeof document.querySelector("[type=datetime]").value);
+//No tiene patrón definido en el HTML: ponerle un Placeholder en el Input correspondiente.
+function mirarFechaNac(){
+        console.log("fechaNac:", document.querySelector("[type=datetime]").value);
 }
-
 
 
 
