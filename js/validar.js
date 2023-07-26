@@ -138,7 +138,7 @@ function validarTiempo(tiempo) {
 
 }
 
-console.log(validarTiempo('15/45')) //Comprobar diferentes formatos de fecha y hora
+console.log("Test VT", validarTiempo('15/45')) //Comprobar diferentes formatos de fecha y hora
 console.log(validarTiempo('15:50'))
 console.log(validarTiempo('17,58'))
 
@@ -170,14 +170,110 @@ function mirarFechaNac(){
 
 
 
-// Validar mes
-// Validar semana
-// Validar intervalo
-// Validar intervalo
-// Validar número de teléfono
+// 7 Validar mes
+function validarmes(mes1){
+        const mes = mes1.trim();
+        const pattern = /(\b\d{1,2}\D{0,3})?\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|(Nov|Dec)(?:ember)?)\D?(\d{1,2}(st|nd|rd|th)?)?(([,.\-\/])\D?)?((19[7-9]\d|20\d{2})|\d{2})*;/
+if(typeof mes !=='string' || mes ==="" || !pattern.test(mes)){
+        console.log("entro en el if")
+return false
+        }else{
+return true
+
+}
+}
+console.log(validarmes("enero de 2022"))
+
+
+// 8 Validar semana
+
+
+function validarsemana(semana1){
+        const semana = semana1.trim();
+        const pattern = /^(?<week>(\d{2}))(?<year>(\d{2}){0,2}[-\/]?)$/;
+        if(typeof semana !=='string' || semana ==="" || !pattern.test(mes)){
+                console.log("entro en el if")
+                return false
+        }else{
+                return true
+        }
+        }
+
+// 9 Validar intervalo del -10 al +10
+
+function validarrangonumerico(validarrango1){
+        const rangonumerico = validarrango1.trim();
+        // console.log("Verificacion antes del if", typeof rangonumerico !=='string'|| rangonumerico =="" ||
+        // rangonumerico < -10 || rangonumerico > 10)
+        if(typeof rangonumerico !== "strin"|| rangonumerico =="" ||
+        rangonumerico < -10 || rangonumerico > 10){
+                
+                
+        console.log("Uno de los valores no es válido")
+
+        return false
+}else{
+        return true
+}
+}
+
+console.log("TestRangonumérico",validarrangonumerico("-10"))
+console.log(validarrangonumerico("18"))
+console.log(validarrangonumerico("0"))
+console.log(validarrangonumerico("-5"))
+
+
+
+
+
+// 10 Validar intervalo del 0 al 10
+
+function validarRango1(validarRango2){
+        const rango = validarRango2.trim();
+        // console.log("Verificacion antes del if", typeof rangonumerico !=='string'|| rangonumerico =="" ||
+        // rangonumerico < -10 || rangonumerico > 10)
+        if(typeof rango !=='string'|| rango =="" ||
+        rango < 0 || rango > 10){
+                
+                
+        console.log("Uno de los valores no es válido")
+
+        return false
+}else{
+        return true
+}
+}
+console.log("TestRango", validarRango1("-10"))
+console.log(validarRango1("10"))
+console.log(validarRango1("18"))
+console.log(validarRango1("5"))
+
+
+
+// 11 Validar número de teléfono    //Comprobar formato: 
+function validarTelefono(validarTelefono1){
+        const tel = validarTelefono1.trim();
+       
+        if(typeof tel !=='string'|| tel ==""  ){
+        const pattern = //;
+                   
+        console.log("Uno de los valores no es válido")
+
+        return false
+}else{
+        return true
+}
+}
+console.log("TestTelefono", validarTelefono("928603560"))
+console.log(validarTelefono("3333333333"))
+console.log(validarTelefono("333333333"))
+console.log(validarTelefono("fffffvvf"))
+
+
+
 /** Verificar que es un número.
  * Limitar la entrada de números a 9.
  */
 
-// Validar término
-// Validar número color 
+// 12 Validar término
+// 13 Validar número color 
