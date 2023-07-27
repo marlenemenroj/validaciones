@@ -185,8 +185,8 @@ return true
 console.log(validarmes("enero de 2022"))
 
 
-// 8 Validar semana
 
+// 8 Validar semana
 
 function validarsemana(semana1){
         const semana = semana1.trim();
@@ -199,13 +199,15 @@ function validarsemana(semana1){
         }
         }
 
+
+
 // 9 Validar intervalo del -10 al +10
 
 function validarrangonumerico(validarrango1){
         const rangonumerico = validarrango1.trim();
         // console.log("Verificacion antes del if", typeof rangonumerico !=='string'|| rangonumerico =="" ||
         // rangonumerico < -10 || rangonumerico > 10)
-        if(typeof rangonumerico !== "strin"|| rangonumerico =="" ||
+        if(typeof rangonumerico !== "string"|| rangonumerico =="" ||
         rangonumerico < -10 || rangonumerico > 10){
                 
                 
@@ -251,29 +253,59 @@ console.log(validarRango1("5"))
 
 
 // 11 Validar número de teléfono    //Comprobar formato: 
-function validarTelefono(validarTelefono1){
-        const tel = validarTelefono1.trim();
-       
-        if(typeof tel !=='string'|| tel ==""  ){
-        const pattern = //;
-                   
-        console.log("Uno de los valores no es válido")
-
-        return false
-}else{
-        return true
-}
-}
-console.log("TestTelefono", validarTelefono("928603560"))
-console.log(validarTelefono("3333333333"))
-console.log(validarTelefono("333333333"))
-console.log(validarTelefono("fffffvvf"))
-
-
 
 /** Verificar que es un número.
  * Limitar la entrada de números a 9.
  */
 
+function validarTelefono(telefono1) {
+        const telefono = telefono1.trim();
+        const pattern = /(\+34|0034|34)?[ -]*(6|7)([0-9]){2}[ -]?(([0-9]){2}[ -]?([0-9]){2}[ -]?([0-9]){2}|([0-9]){3}[ -]?([0-9]){3})/
+        if (typeof telefono !== 'string' || telefono === "" || !pattern.test(telefono)) {
+            console.log("Uno de los valores no es válido")
+            return false
+        } else {
+            return true
+        }
+    }
+    console.log(validarTelefono(" +34 666 024 775 "))
+    console.log(validarTelefono(" +66 897 333 555 "))
+    console.log(validarTelefono(" 11 "))
+
+    function mirarTelefono(){
+        console.log("NTelefono:", document.querySelector("[type=tel]").value);
+}
+
 // 12 Validar término
+
+function validarTerminos(terminos){
+        const busqueda = terminos.trim();
+        const pattern = /^[A-Za-z0-9\s]+$/;
+        //console.log("sin limpiar: ", busqueda, " y limpio: ", busquedas)
+        if (typeof busqueda !== 'string' || busqueda === "" || !pattern.test(busqueda)) {
+            console.log("entro en la búsqueda")
+            return false
+        } else {
+            return true
+        }
+    }
+    console.log(validarTerminos("HOLA, que tal, somos 15 en clase" ))
+
+
 // 13 Validar número color 
+
+function validarColor(color1) {
+        const color = color1.trim();
+        const pattern = /(?:#|0x)(?:[a-f0-9]{3}|[a-f0-9]{6})\b|(?:rgb|hsl)a?\([^\)]*\)/;
+        if (typeof color !== 'string' || color === "" || !pattern.test(color)) {
+            console.log("entro en los colores")
+            return false
+        } else {
+            return true
+        }
+    }
+    console.log(validarColor(""))
+    console.log(validarColor(""))
+    console.log(validarColor(""))
+    
+ 
